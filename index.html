@@ -26,10 +26,11 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">简介</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">项目经验</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">实习经历</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">教育背景</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">职业技能</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">项目经验</a></li>
+                    
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">获奖证书</a></li>
                 </ul>
             </div>
@@ -49,12 +50,25 @@
                         <a href="mailto:name@email.com">邮箱:Brucegis20@163.com</a>
                     </div>
                     <p class="lead mb-5">我的求职方向是<u style="color: rgb(172, 105, 11);">WebGIS开发工程师</u> 
-                        <br>熟悉全流程的Web开发 · 框架VUE-3 & Django · GIS前端框架Cesium & Leaflet</p>
+                        <br>熟悉WebGIS开发 · 框架VUE-3 & Django · GIS前端框架Cesium & Leaflet</p>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- 项目经验-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-3">独立开发项目：飞行情报地图</h2>
+                    <p>从零构建一款飞行情报视觉化应用（对标软件：飞常准与flightradar24）</p>
+                    <p class="mb-3">功能：实现了获取到发布欧洲地区真实且实时的空域、飞行器、障碍物、气象数据的可视化。</p>
+                    <p class="mb-3"><h6>解决难题：1.克服大量点集数据（欧洲机场数据集）在轻量化框架Leaflet中实时加载与渲染；2.飞机数据大量且实时更新，设计其在数据库存储与读取的方式；3.完整的飞行情报地图需求分析，功能设计，系统开发，部署备案流程。</h6></p>
+                    <p class="mb-3">技术栈：前端Vite构建Vue3框架，地图视图分别支持二维Leaflet与三维Cesium，用户界面采用Element-plus组件进行搭建，实现了界面模块化布局。后端采用Django+Geodjango框架，同时挂载自动化脚本，实现获取更新数据到PostGIS数据库；Gi进行代码的管理，使用docker将项目打包部署，购买域名并完成ICP备案，将域名解析到主机。</p>
+                    <p class="mb-3"><h6>最终效果：基础功能可以实现，延迟控制在150ms内，部分细节功能已完成原型设计但因时间原因未完成优化。</h6></p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://github.com/200102108limengsong/Vue_Cesium"><i class="fab fa-github"></i></a>
-                        
                     </div>
                 </div>
+                
             </section>
             <hr class="m-0" />
             <!-- 实习经验-->
@@ -63,12 +77,12 @@
                     <h2 class="mb-5">实习经历</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">时空大数据算法实习生</h3>
+                            <h3 class="mb-0">时空数据算法实习生</h3>
                             <div class="subheading mb-3">新华社——卫星新闻实验室</div>
                             <p>在实习期间参与了“新能源汽车产量遥感监测项目”，为上级媒体、商业分析机构提供月度工厂实际产能信息预期。</p>
-                            <p>*手机信令数据清洗：</p>
-                            <p>*地理信息爬取：</p>
-                            <p>*数据分析与可视化:</p>
+                            <p>*手机信令数据：使用GeoPandas、Scipy进行数据清洗、趋势化分析与地理编码，将信令数据转化为地理信息数据。</p>
+                            <p>*地理信息爬取：使用selenium、requests、json等分析网页结构后，抓包获取json分析工厂位置POI的详细信息。</p>
+                            <p>*遥感影像处理:使用ENVI对高分二号影像进行辐射定标、大气矫正、波段融合等操作，提供更高分辨率清晰遥感影像。</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2023年9月 - 2024年1月</span></div>
                     </div>
@@ -79,7 +93,7 @@
                             <p>在实习期间参与了“河南在役公路基础设施数字化项目”，为河南省公路管理局提供路网基础信息、健康程度、安全隐患排查与预警等相关功能数字化。</p>
                             <p>*道路桩号算法：使用 Arcpy3.9 独立完成公路点位桩号与车载桩号识别、提取、计算，为实际定位提供基础。</p>
                             <p>*急弯提取算法：采用道格拉斯-普克抽稀算法（对多点拟合曲线，计算曲线曲率）实现对公路转折点角度的计算。在此基础上参照国标道路设计标准，按设计时速自动配置阈值输出转折点为急弯的点位。</p>
-                            <p>*道路交叉口提取:使用GDAL基于OSM路网数据等多源信息,优化分级公路交叉口提取算法,对比公路实景数据验证精度大于84%。</p>
+                            <p>*道路交叉口提取:使用GDAL基于OSM路网数据等多源信息,优化分级公路交叉口提取算法,验证精度大于84%。</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2023年7月 - 2023年9月</span></div>
                     </div>
@@ -168,19 +182,7 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- 项目经验-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">独立开发项目</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                    <br>
-                    <h2 class="mb-5">校园项目</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
+            
             <!-- 获奖证书-->
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
